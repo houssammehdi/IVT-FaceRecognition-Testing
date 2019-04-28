@@ -1,0 +1,18 @@
+<link href="https://fonts.googleapis.com/css?family=Merriweather" rel="stylesheet">
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <a id="home" class="navbar-brand" routerLink="/detect">Face API</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+        <a id="nav" class="nav-item nav-link active" routerLink="/detect">Detect</a>
+        <a id="nav" class="nav-item nav-link active" routerLink="/identify">Identify</a>
+        <a id="nav" class="nav-item nav-link active" routerLink="/train">Train</a>
+        <a id="nav" class="nav-item nav-link active" routerLink="/about">About</a>
+      </div>
+    </div>
+  </nav>
+
+<router-outlet></router-outlet>
