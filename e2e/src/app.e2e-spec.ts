@@ -10,7 +10,7 @@ describe('workspace-project App', () => {
 
   it('should display welcome message', () => {
     page.navigateTo();
-    expect(page.getTitleText()).toEqual('Upload an image to Face Detect!');
+    expect(page.getTitleText()).toEqual('Upload an image to Face Detect');
   });
 
   afterEach(async () => {
