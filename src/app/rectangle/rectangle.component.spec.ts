@@ -11,7 +11,6 @@ describe('RectangleComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [ RectangleComponent ],
-      schemas: [NO_ERRORS_SCHEMA],
       imports: [HttpClientModule]
     })
     .compileComponents();
