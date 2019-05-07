@@ -25,5 +25,5 @@ describe('TrainComponent', () => {
 
   it('should create', () => {
     expect(component).toBeTruthy();
-  });
+  }); 
 });
