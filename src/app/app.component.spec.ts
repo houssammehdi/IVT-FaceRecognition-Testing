@@ -28,4 +28,10 @@ describe('AppComponent', () => {
     expect(app.title).toEqual('AgeRecognition');
   });
 
-});
+  it('should render "Face API" header ', async(()=> {
+    const fixture = TestBed.createComponent(AppComponent);
+    fixture.detectChanges();
+    const compiled =fixture.debugElement.nativeElement;
+    expect(compiled.querySelector('a').textContent).toContain('Face API');
+  }));
+  });
