@@ -25,5 +25,5 @@ describe('TableComponent', () => {
 
   it('should create', () => {
     expect(component).toBeTruthy();
-  });
+  }); 
 });

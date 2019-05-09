@@ -40,5 +40,4 @@ describe('DetectComponent', () => {
     const compiled = fixture.debugElement.nativeElement;
     expect(compiled.querySelector('h1').textContent).toContain('Upload an image to Face Detect');
   });
-
 });

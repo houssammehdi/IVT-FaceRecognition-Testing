@@ -41,6 +41,4 @@ describe('AboutComponent', () => {
     const compiled = fixture.debugElement.nativeElement;
     expect(compiled.querySelector('div.a>img').src).toContain('/assets/img/github.png');
   }));
-
-
 });
