@@ -3,7 +3,7 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { AboutComponent } from './about.component';
 import { NO_ERRORS_SCHEMA } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
-import {trigger} from '@angular/animations';
+import {RouterTestingModule} from '@angular/router/testing';
 
 describe('AboutComponent', () => {
   let component: AboutComponent;
@@ -13,7 +13,7 @@ describe('AboutComponent', () => {
     TestBed.configureTestingModule({
       declarations: [ AboutComponent ],
       schemas: [NO_ERRORS_SCHEMA],
-      imports: [HttpClientModule]
+      imports: [HttpClientModule, RouterTestingModule]
     })
     .compileComponents();
   }));
@@ -29,18 +29,12 @@ describe('AboutComponent', () => {
   });
 
   it('should render the href link', async(() => {
-    const fixture = TestBed.createComponent(this);
-    fixture.detectChanges();
     const compiled = fixture.debugElement.nativeElement;
-    expect(compiled.querySelector('div.a').href).toContain('https://github.com/houssam98/');
+    expect(compiled.querySelector('a').href).toContain('https://github.com/houssam98/');
   }));
 
-  it('should render the image', async(() => {
-    const fixture = TestBed.createComponent(this);
-    fixture.detectChanges();
+  it('should render the correct image', async(() => {
     const compiled = fixture.debugElement.nativeElement;
-    expect(compiled.querySelector('div.a>img').src).toContain('/assets/img/github.png');
+    expect(compiled.querySelector('img').src).toContain('/assets/img/github.png');
   }));
-
-
 });
