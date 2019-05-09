@@ -33,9 +33,8 @@ describe('DetectComponent', () => {
   });
 
   it('should get json response from ', function() {
-    component.getData_URL('www.example.com/image.jpg');
-    expect(component.url).toContain("www.example.com/image.jpg");
-    console.log(component.faceApiResponse);
+    component.getData_URL('https://res.cloudinary.com/demo/image/upload/w_200/lady.jpg');
+    expect(component.url).toContain("https://res.cloudinary.com/demo/image/upload/w_200/lady.jpg");
     expect(component.faceApiResponse).toString();
   });
 
