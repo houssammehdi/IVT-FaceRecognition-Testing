@@ -2,7 +2,7 @@ table, td, th{
     border: 1px solid #1E487F;
     text-align: left;
 }
-#table1{ align :"center"}
+#table1{ align : center}
 
 table{
     overflow: hidden;
