@@ -24,7 +24,7 @@ export class IdentifyComponent implements OnInit {
   async handleFileInput(event, group_id: string){
     this.uploadedFiles = event.target.files;
     this.getPreview(this.uploadedFiles[0]);
-    const getIDs = await this.data.detectFace_File(this.uploadedFiles[0]).toPromise().then(data => 
+     await this.data.detectFace_File(this.uploadedFiles[0]).toPromise().then(data => 
       { 
         let ressource = data[0];
         this.faceIds[0] = ressource["faceId"];
@@ -35,9 +35,9 @@ export class IdentifyComponent implements OnInit {
 
   async faceIdentify(group_id: string){
 
-    const getID = await this.data.faceIdentify(group_id, this.faceIds).toPromise().then(data => this.matchId = data.body[0].candidates[0].personId);
+    await this.data.faceIdentify(group_id, this.faceIds).toPromise().then(data => this.matchId = data.body[0].candidates[0].personId);
   
-    const getName = await this.data.getPerson(group_id, this.matchId).toPromise().then(data =>
+   await this.data.getPerson(group_id, this.matchId).toPromise().then(data =>
       {
         this.matchName = data.body["name"] 
         this.matchData = data.body["userData"]
@@ -47,7 +47,7 @@ export class IdentifyComponent implements OnInit {
 
   async handleUrlInput(url: string, group_id: string){
     this.url = url;
-    const getIDs = await this.data.detectFace_URL(url).toPromise().then(data => 
+   await this.data.detectFace_URL(url).toPromise().then(data => 
       { 
         let ressource = data[0];
         this.faceIds[0] = ressource["faceId"];

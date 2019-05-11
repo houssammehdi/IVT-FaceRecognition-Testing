@@ -44,7 +44,7 @@ export class TrainComponent implements OnInit {
   }
 
   trainGroup(group_id:string){
-    this.data.trainGroup(group_id).subscribe(res => { this.train_response = res.status, console.log(res) }, error => console.log(error));
+    this.data.trainGroup(group_id).subscribe(res => { this.train_response = res.status}, error => console.log(error));
   }
 
   trainFromFolder(){
