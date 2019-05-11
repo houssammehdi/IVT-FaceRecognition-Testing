@@ -20,10 +20,14 @@ describe('TrainComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(TrainComponent);
     component = fixture.componentInstance;
+
     fixture.detectChanges();
   });
 
   it('should create', () => {
     expect(component).toBeTruthy();
-  }); 
+  });
+  it ("should react to button click " ,() => {
+    expect(component).toBeTruthy();
+  });
 });
