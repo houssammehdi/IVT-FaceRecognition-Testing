@@ -25,18 +25,21 @@ export class DetectComponent implements OnInit {
     this.nbFaces = 0;
     this.uploadedFile = event.target.files[0];
 
-    this.data.detectFace_File(this.uploadedFile).subscribe(data => 
+    this.data.detectFace_File(this.uploadedFile).subscribe(data =>
     {
-      this.faceApiResponse = { ...data };
+      this.faceApiResponse = { ...data }, console.log(this.faceApiResponse)
     },
      error => console.log(error));
     this.getPreview(this.uploadedFile);
 }
 
 getData_URL(imageURL: string){
-
   this.url = imageURL;
-  this.data.detectFace_URL(imageURL).subscribe(data => this.faceApiResponse = { ...data }, error => console.log(error));
+  this.data.detectFace_URL(imageURL).subscribe(data =>
+    {
+      this.faceApiResponse = { ...data }, console.log(this.faceApiResponse)
+    },
+    error => console.log(error));
 }
 
 getPreview(file: File){
